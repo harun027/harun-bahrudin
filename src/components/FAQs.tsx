@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import icons from "@/public/assets/icons";
 
 const FQAS = [
   {
@@ -59,44 +59,38 @@ export default function FAQs() {
             const isOpen = openIndex === index;
 
             return (
-              <div
-                key={index}
-                className="border border-[#12121226] rounded-lg w-full"
+              <button
+                onClick={() => toggle(index)}
+                className="cursor-pointer"
               >
-                <div className="flex gap-5 items-center justify-between w-full text-left py-3.5 px-5">
-                  <h2 className="text-base font-medium">{item.question}</h2>
-                  <button
-                    onClick={() => toggle(index)}
-                    className="transition-transform duration-300 transform rounded-full border border-[#12121226] p-1.5 cursor-pointer"
-                  >
-                    <Image
-                      src={"/icons/Add.svg"}
-                      width={15}
-                      height={15}
-                      alt={"add"}
-                      className={`transition-transform duration-300 transform ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                    />
-                  </button>
-                </div>
+                <div
+                  key={index}
+                  className="border border-[#12121226] rounded-lg w-full"
+                >
+                  <div className="flex gap-5 items-center justify-between w-full text-left py-3.5 px-5">
+                    <h2 className="text-base font-medium">{item.question}</h2>
+                    <div className="transition-transform duration-300 transform rounded-full border border-[#12121226] p-1.5 cursor-pointer">
+                      <icons.AddIcon className={`transition-transform duration-300 transform ${isOpen ? "rotate-45" : ""}`} />
+                    </div>
+                  </div>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-5"
-                    >
-                      <div className="pb-4 pt-3.5 text-base text-gray-500 leading-relaxed border-t border-[#12121226]">
-                        {item.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-5"
+                      >
+                        <div className="pb-4 pt-3.5 text-base text-gray-500 leading-relaxed border-t border-[#12121226] text-left">
+                          {item.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </button>
             );
           })}
         </div>
