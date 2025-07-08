@@ -7,7 +7,7 @@ export default function Contact() {
         {/* Kolom Kiri */}
         <div className="space-y-6">
           {/* Header: Let's Connect */}
-          <div className="bg-white p-5 rounded-lg">
+          <div className="bg-white p-6 rounded-lg">
             <div className="flex flex-col gap-2.5">
               <Icons.HarunIcon width={50} height={50} color="black" />
               <h2 className="text-2xl font-semibold">📬 Let’s Connect!</h2>
