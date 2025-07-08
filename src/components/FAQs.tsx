@@ -62,15 +62,17 @@ export default function FAQs() {
               <button
                 onClick={() => toggle(index)}
                 className="cursor-pointer"
+                key={index}
               >
-                <div
-                  key={index}
-                  className="border border-[#12121226] rounded-lg w-full"
-                >
+                <div className="border border-[#12121226] rounded-lg w-full">
                   <div className="flex gap-5 items-center justify-between w-full text-left py-3.5 px-5">
                     <h2 className="text-base font-medium">{item.question}</h2>
                     <div className="transition-transform duration-300 transform rounded-full border border-[#12121226] p-1.5 cursor-pointer">
-                      <icons.AddIcon className={`transition-transform duration-300 transform ${isOpen ? "rotate-45" : ""}`} />
+                      <icons.AddIcon
+                        className={`transition-transform duration-300 transform ${
+                          isOpen ? "rotate-45" : ""
+                        }`}
+                      />
                     </div>
                   </div>
 
