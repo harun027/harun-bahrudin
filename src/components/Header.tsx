@@ -56,7 +56,7 @@ export default function Header() {
       
       {/* Mobile Menu Fullscreen Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-white z-50 md:hidden">
+        <div className="fixed inset-0 bg-white/50 backdrop-blur-sm z-50 md:hidden">
           {/* Header in overlay */}
           <div className="px-[15px] py-[20px] border-b border-gray-300 flex justify-between items-center">
             <div className="flex gap-2 items-center">
@@ -76,7 +76,7 @@ export default function Header() {
                   <a 
                     href={menu.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-[12px] py-[16px] text-lg font-semibold hover:bg-gray-50 rounded-lg"
+                    className="block px-[8px] py-[8px] text-lg hover:bg-gray-50 rounded-lg"
                   >
                     {menu.name}
                   </a>
@@ -85,7 +85,7 @@ export default function Header() {
             </ul>
             
             {/* Language Toggle at bottom */}
-            <div>
+            <div className="px-[8px]">
               <LanguageToggle />
             </div>
           </div>

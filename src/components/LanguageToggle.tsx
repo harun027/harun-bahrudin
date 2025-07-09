@@ -5,7 +5,7 @@ import icons from "@/public/assets/icons";
 
 export default function LanguageToggle() {
   const { i18n } = useTranslation();
-  const currentLanguage = i18n.language || "id";
+  const currentLanguage = i18n.language || "en";
 
   const toggleLanguage = () => {
     const newLanguage = currentLanguage === "id" ? "en" : "id";
