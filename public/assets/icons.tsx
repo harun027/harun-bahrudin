@@ -9,6 +9,10 @@ import Linkedin from "@/public/assets/icons/linkedin";
 import Dribble from "@/public/assets/icons/dribble";
 import Behance from "@/public/assets/icons/behance";
 import Arrow from "@/public/assets/icons/arrow";
+import Figma from "@/public/assets/icons/figma";
+import Chain from "./icons/chain";
+import Page from "./icons/page";
+import Back from "./icons/back";
 
 export default {
   AddIcon,
@@ -22,4 +26,8 @@ export default {
   Dribble,
   Behance,
   Arrow,
+  Figma,
+  Chain,
+  Page,
+  Back,
 } as const;
