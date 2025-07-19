@@ -13,6 +13,7 @@ import Figma from "@/public/assets/icons/figma";
 import Chain from "./icons/chain";
 import Page from "./icons/page";
 import Back from "./icons/back";
+import Star from "./icons/star";
 
 export default {
   AddIcon,
@@ -30,4 +31,5 @@ export default {
   Chain,
   Page,
   Back,
+  Star,
 } as const;
