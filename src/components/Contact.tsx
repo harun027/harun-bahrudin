@@ -32,7 +32,7 @@ export default function Contact() {
                 Got questions, ideas, or opportunities to share? Send me an
                 email, and I’ll get back to you as soon as possible.
               </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md w-full">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md w-full cursor-pointer">
                 Email me
               </button>
             </div>
