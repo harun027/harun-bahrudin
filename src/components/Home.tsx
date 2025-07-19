@@ -48,30 +48,31 @@ export default function Home() {
           <Image src="/assets/images/hero.svg" alt="Hero Image" width={500} height={500} />
         </div>
       </div>
-      <div className="relative overflow-x-hidden bg-black py-[18px] px-4 md:px-[60px]">
-        <div className="flex items-center whitespace-nowrap animate-marquee">
-          {[...skills, ...skills, ...skills].map((skill, idx) => (
-            <div key={skill.name + idx} className="flex flex-row gap-2 items-center mx-6 md:mx-[60px]">
+      <div className="relative overflow-x-hidden bg-black py-[18px] px-4 md:px-[60px] mt-10 md:mt-0">
+        <div className="flex items-center animate-marquee">
+          {[...skills, ...skills, ...skills, ...skills].map((skill, idx) => (
+            <div key={skill.name + idx} className="flex flex-row gap-2 items-center shrink-0">
               <icons.Star />
-              <p className="text-white font-semibold text-sm md:text-base">{skill.name}</p>
+              <p className="text-white font-semibold text-sm md:text-base whitespace-nowrap mr-12 md:mr-[80px]">{skill.name}</p>
             </div>
           ))}
         </div>
         <style jsx>{`
-          @keyframes marquee {
+          .animate-marquee {
+            animation: scroll 25s linear infinite;
+            width: max-content;
+          }
+          @keyframes scroll {
             0% {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-33.333%);
+              transform: translateX(-25%);
             }
           }
-          .animate-marquee {
-            animation: marquee 20s linear infinite;
-          }
-          @media (min-width: 768px) {
+          @media (max-width: 767px) {
             .animate-marquee {
-              animation: marquee 30s linear infinite;
+              animation: scroll 15s linear infinite;
             }
           }
         `}</style>
