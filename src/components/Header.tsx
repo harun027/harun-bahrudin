@@ -25,7 +25,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="px-[15px] py-[20px] lg:px-[60px] lg:py-[16px] border-b border-gray-300 pb-4 relative">
+    <header className="px-[15px] py-[20px] lg:px-[60px] lg:py-[16px] border-b border-gray-300 pb-4 relative sticky top-0 bg-white z-50">
       {/* Desktop */}
       <div className="gap-5 lg:gap-2 justify-between hidden md:flex">
         <div className="flex gap-2 items-center">
