@@ -14,6 +14,10 @@ import Chain from "./icons/chain";
 import Page from "./icons/page";
 import Back from "./icons/back";
 import Star from "./icons/star";
+import UiKit from "./icons/ui_kit";
+import Sale from "./icons/sale";
+import Platform from "./icons/platform";
+import Frame from "./icons/frame";
 
 export default {
   AddIcon,
@@ -32,4 +36,8 @@ export default {
   Page,
   Back,
   Star,
+  UiKit,
+  Sale,
+  Platform,
+  Frame,
 } as const;
